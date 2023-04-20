@@ -1,0 +1,100 @@
+body{
+    background-color: aliceblue;
+}
+.grid {
+    display: grid;
+    width: 100%;
+    height: 800px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+div {
+    padding: 10px;
+}
+.green, .red, .purple {
+    color: white;
+}
+
+.green {
+    background-color: darkgreen;
+    grid-column: 1 / span 3;
+}
+.red {
+    background-color: darkred;
+    grid-column: 1 / span 3;
+}
+.blue {
+    order: -1;
+    background-color: darkcyan;
+    grid-column: 1 / span 3;
+}
+.yellow {
+    background-color: goldenrod;
+    grid-column: 1 / span 3;
+}
+.purple {
+    background-color: darkmagenta;
+    grid-column: 1 / span 3;
+}
+.orange {
+    background-color: darkorange;
+    grid-column: 1 / span 3;
+}
+
+/* ^^^ Mobile ^^^ */
+/* vvv Tablet vvv */
+@media (min-width: 600px)
+{
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 2fr) 1fr;
+    }
+    .green {
+        grid-column: 1 / span 2;
+    }
+    .red {
+        grid-column: 1 / span 2;
+    }
+    .blue {
+        grid-column: 1 / span 2;
+    }
+    .yellow {
+        grid-column: 1 / 2;
+    }
+    .purple {
+        grid-column: 2 / 3;
+    }
+    .orange {
+        grid-column: 1 / span 2;
+    }
+}
+
+/* ^^^ Tablet ^^^ */
+/* vvv Desktop vvv */
+@media (min-width: 1400px)
+{
+    .grid{
+        grid-template-columns: 2fr 4fr 2fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .green {
+        grid-column: 1 / span 3;
+    }
+    .red {
+        grid-column: 1 / 2;
+    }
+    .blue {
+        order: unset;
+        grid-column: 2 / 3;
+    }
+    .yellow {
+        grid-column: 3 / 4;
+    }
+    .purple {
+        grid-column: 1 / 3;
+    }
+    .orange {
+        grid-column: 3 / 4;
+    }
+}

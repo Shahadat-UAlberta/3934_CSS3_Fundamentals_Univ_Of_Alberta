@@ -1,0 +1,28 @@
+#main{
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+
+.img-section{
+    width: 40%;
+    display: inline-block;
+}
+
+.img-section img{
+    border: 2px solid black;
+}
+a{ 
+    color:tomato;
+    text-align: center;
+}
+.details{
+    width: 50%;
+    display: inline-block;
+    margin-left: 30px;
+    font-family:'Times New Roman', Times, serif
+}
+
+h4:hover,p:hover{
+    background-color: rgb(21, 255, 0);
+}
+
